@@ -1,36 +1,37 @@
-Sistema de Gestão de Consultas Médicas
-Descrição inicial
-Este projeto foi desenvolvido no âmbito da unidade curricular de Programação Funcional, utilizando a linguagem Haskell. O objetivo deste sistema é gerir pacientes e consultas médicas através de uma abordagem funcional baseada em tipos algébricos, recursão e funções puras. Nesta primeira fase do projeto foram implementadas as estruturas de dados principais e um conjunto inicial de funcionalidades relacionadas com a gestão de pacientes e consultas. 
+Sistema de Gestï¿½o de Consultas Mï¿½dicas
+Descriï¿½ï¿½o inicial
+Este projeto foi desenvolvido no ï¿½mbito da unidade curricular de Programaï¿½ï¿½o Funcional, utilizando a linguagem Haskell. O objetivo deste sistema ï¿½ gerir pacientes e consultas mï¿½dicas atravï¿½s de uma abordagem funcional baseada em tipos algï¿½bricos, recursï¿½o e funï¿½ï¿½es puras. Nesta primeira fase do projeto foram implementadas as estruturas de dados principais e um conjunto inicial de funcionalidades relacionadas com a gestï¿½o de pacientes e consultas. 
 Funcionalidades Implementadas
-Gestão de Pacientes
+Gestï¿½o de Pacientes
 * Registar novos pacientes.
 * Pesquisar pacientes pelo nome.
-* Procurar pacientes através do identificador.
-Gestão de Consultas
+* Procurar pacientes atravï¿½s do identificador.
+Gestï¿½o de Consultas
 * Consultar todas as consultas de um determinado paciente.
-* Contar o número de consultas associadas a um paciente.
+* Contar o nï¿½mero de consultas associadas a um paciente.
 * Identificar pacientes sem consultas registadas.
 Estrutura 
 Model.hs
-Contém os tipos de dados que representam o domínio da aplicação:
+Contï¿½m os tipos de dados que representam o domï¿½nio da aplicaï¿½ï¿½o:
 * EstadoConsulta
 * Paciente
 * Consulta
 Inclui ainda conjuntos de dados de exemplo para testes.  
 Domain.hs
-Contém a lógica principal da aplicação:
+Contï¿½m a lï¿½gica principal da aplicaï¿½ï¿½o:
 * registarPaciente
 * pesquisarPacienteNome
 * procurarPacienteId
 * consultasDoPaciente
 * contarConsultasPaciente
 * pacientesSemConsultas
-Estas funções constituem o núcleo funcional do projeto. 
+Estas funï¿½ï¿½es constituem o nï¿½cleo funcional do projeto. 
 Trabalho Desenvolvido na Fase 1
 Nesta fase foi realizada:
-* Modelação do domínio do problema.
-* Definição dos tipos de dados principais.
-* Implementação das primeiras operações funcionais.
-* Utilização de recursão para processamento de listas.
-* Criação de dados de demonstração.
-
+* Modelaï¿½ï¿½o do domï¿½nio do problema.
+* Definiï¿½ï¿½o dos tipos de dados principais.
+* Implementaï¿½ï¿½o das primeiras operaï¿½ï¿½es funcionais.
+* Utilizaï¿½ï¿½o de recursï¿½o para processamento de listas.
+* Criaï¿½ï¿½o de dados de demonstraï¿½ï¿½o.
+Link do repositÃ³rio GitHub:
+https://github.com/duartebraga719/Trabalho_PF

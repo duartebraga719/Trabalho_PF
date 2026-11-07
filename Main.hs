@@ -2,7 +2,6 @@
 module Main where
 
 import Model
-import DadosExemplo
 import Consultas
 
 main :: IO ()
@@ -12,16 +11,16 @@ main = do
     putStrLn ""
 
     putStrLn "Paciente com ID 1:"
-    print (procurarPaciente 1 pacientesExemplo)
+    print (procurarPaciente "1" pacientesExemplo)
 
     putStrLn ""
     putStrLn "Consultas associadas ao paciente com ID 1:"
-    mapM_ print (consultasDoPaciente 1 consultasExemplo)
+    mapM_ print (consultasDoPaciente "1" consultasExemplo)
 
     putStrLn ""
     putStrLn "Numero de consultas associadas ao paciente com ID 1:"
-    print (contarConsultasPaciente 1 consultasExemplo)
+    print (contarConsultasPaciente "1" consultasExemplo)
 
     putStrLn ""
     putStrLn "Pesquisa de um ID inexistente (99):"
-    print (procurarPaciente 99 pacientesExemplo)
+    print (procurarPaciente "99" pacientesExemplo)

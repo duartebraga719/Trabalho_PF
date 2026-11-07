@@ -1,27 +1,26 @@
 
-import Model
-
 module Consultas
-(
-    procurarPaciente,
+  ( procurarPaciente,
     consultasDoPaciente,
     contarConsultasPaciente
-) where
+  ) where
 
-procurarPaciente :: Int -> Paciente
-procurarPaciente _ [] = Nothing
+import Model
+
+procurarPaciente :: NumUtente -> [Paciente] -> Paciente
+procurarPaciente _ [] = Paciente "" "Paciente inexistente" 0 ""
 procurarPaciente identificador (p:ps)
-    | idPaciente p == identificador = Just p
-    | otherwise = procurarPaciente identificador ps
+  | numUtente p == identificador = p
+  | otherwise = procurarPaciente identificador ps
 
-consultasDoPaciente :: Int -> [Consulta] -> [Consulta]
+consultasDoPaciente :: NumUtente -> [Consulta] -> [Consulta]
 consultasDoPaciente _ [] = []
 consultasDoPaciente identificador (c:cs)
-    | pacienteAssociado c == identificador = c : consultasDoPaciente identificador cs
-    | otherwise = consultasDoPaciente identificador cs
+  | numUtenteConsulta c == identificador = c : consultasDoPaciente identificador cs
+  | otherwise = consultasDoPaciente identificador cs
 
-contarConsultasPaciente :: Int -> [Consulta] -> Int
+contarConsultasPaciente :: NumUtente -> [Consulta] -> Int
 contarConsultasPaciente _ [] = 0
 contarConsultasPaciente identificador (c:cs)
-    | pacienteAssociado c == identificador = 1 + contarConsultasPaciente identificador cs
-    | otherwise = contarConsultasPaciente identificador cs
+  | numUtenteConsulta c == identificador = 1 + contarConsultasPaciente identificador cs
+  | otherwise = contarConsultasPaciente identificador cs

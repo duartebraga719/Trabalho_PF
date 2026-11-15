@@ -4,7 +4,10 @@ module Domain where
 import Model
 
 registarPaciente :: Paciente -> [Paciente] -> [Paciente]
-registarPaciente paciente pacientes = paciente : pacientes
+registarPaciente paciente pacientes =
+    case procurarPacienteNUt (numUtente paciente) pacientes of
+        Just _  -> pacientes
+        Nothing -> paciente : pacientes
 
 pesquisarPacienteNome :: String -> [Paciente] -> [Paciente]
 pesquisarPacienteNome _ [] = []
@@ -12,10 +15,10 @@ pesquisarPacienteNome nome (p:ps)
     | nomePaciente p == nome = p : pesquisarPacienteNome nome ps
     | otherwise = pesquisarPacienteNome nome ps
 
-procurarPacienteNUt :: NumUtente -> [Paciente] -> Paciente
-procurarPacienteNUt _ [] = Paciente "" "Paciente inexistente" 0 ""
+procurarPacienteNUt :: NumUtente -> [Paciente] -> Maybe Paciente
+procurarPacienteNUt _ [] = Nothing
 procurarPacienteNUt identificador (p:ps)
-    | numUtente p == identificador = p
+    | numUtente p == identificador = Just p
     | otherwise = procurarPacienteNUt identificador ps
 
 consultasDoPaciente :: NumUtente -> [Consulta] -> [Consulta]

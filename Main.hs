@@ -10,17 +10,21 @@ main = do
     putStrLn "Demonstracao da Fase 1"
     putStrLn ""
 
-    putStrLn "Paciente com ID 1:"
-    print (procurarPaciente "1" pacientesExemplo)
+    putStrLn "Paciente com ID 157078146:"
+    case procurarPaciente "157078146" pacientesExemplo of
+        Just p  -> print p
+        Nothing -> putStrLn "Paciente inexistente."
 
     putStrLn ""
-    putStrLn "Consultas associadas ao paciente com ID 1:"
-    mapM_ print (consultasDoPaciente "1" consultasExemplo)
+    putStrLn "Consultas associadas ao paciente com ID 157078146:"
+    mapM_ print (consultasDoPaciente "157078146" consultasExemplo)
 
     putStrLn ""
-    putStrLn "Numero de consultas associadas ao paciente com ID 1:"
-    print (contarConsultasPaciente "1" consultasExemplo)
+    putStrLn "Numero de consultas associadas ao paciente com ID 157078146:"
+    print (contarConsultasPaciente "157078146" consultasExemplo)
 
     putStrLn ""
     putStrLn "Pesquisa de um ID inexistente (99):"
-    print (procurarPaciente "99" pacientesExemplo)
+    case procurarPaciente "99" pacientesExemplo of
+        Just p  -> print p
+        Nothing -> putStrLn "Paciente inexistente."

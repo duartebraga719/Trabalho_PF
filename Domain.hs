@@ -39,4 +39,4 @@ pacientesSemConsultas (p:ps) cs
     | contarConsultasPaciente (numUtente p) cs == 0 =
         p : pacientesSemConsultas ps cs
     | otherwise =
-        pacientesSemConsultas ps cs
+        pacientesSemConsultas ps cs 

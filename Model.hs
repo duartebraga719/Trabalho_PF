@@ -29,7 +29,8 @@ pacientesExemplo =
     [ 
         Paciente "157078146" "Ana Martins" 34 "910000001",
         Paciente "163200867" "Joao Ribeiro" 52 "910000002",
-        Paciente "156243581" "Maria Costa" 27 "910000003"
+        Paciente "156243581" "Maria Costa" 27 "910000003",
+        Paciente "233445554" "Manuel Martins" 58 "910000004"
     ]
 
 

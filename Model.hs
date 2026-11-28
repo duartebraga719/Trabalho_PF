@@ -17,19 +17,19 @@ data Paciente = Paciente
 
 data Medico = Medico
     { 
-        idMedico     :: IdMedico,
-        nomeMedico   :: String,
+        idMedico :: IdMedico,
+        nomeMedico :: String,
         especialidade :: String
     } deriving (Show, Eq)
 
 data Consulta = Consulta
     { 
-        idConsulta        :: Int,
-        dataConsulta      :: String,
-        horaConsulta      :: String,
+        idConsulta :: Int,
+        dataConsulta :: String,
+        horaConsulta :: String,
         numUtenteConsulta :: NumUtente,
-        idMedicoConsulta  :: IdMedico,
-        estadoConsulta    :: EstadoConsulta
+        idMedicoConsulta :: IdMedico,
+        estadoConsulta :: EstadoConsulta
     } deriving (Show, Eq)
 
 pacientesExemplo = 
